@@ -206,18 +206,18 @@ namespace Cumulative01.Controllers
 
             return 0;
         }
-        /// <summary>
-        /// Updates an existing Teacher in the database
-        /// </summary>
-        /// <param name="TeacherId">Primary key of the teacher to update</param>
-        /// <param name="TeacherData">Teacher object with updated information</param>
-        /// <example>
-        /// PUT: api/TeacherAPI/UpdateTeacher/3
-        /// BODY: { "TeacherFirstName": "John", "TeacherLastName": "Doe", "EmployeeID": "T123", "HireDate": "2021-09-01", "Salary": 60000 }
-        /// </example>
-        /// <returns>
-        /// Nothing (void). Updates the teacher record in the database.
-        /// </returns>
+/// <summary>
+/// Modifies the details of an existing teacher in the database.
+/// </summary>
+/// <param name="TeacherId">The unique identifier of the teacher to be updated.</param>
+/// <param name="TeacherData">An object containing the new values for the teacher's information.</param>
+/// <example>
+/// PUT: api/TeacherAPI/UpdateTeacher/3
+/// BODY: { "TeacherFname": "Jaspreet", "TeacherLname": "Kaur", "EmployeeID": "87823", "HireDate": "2021-09-01", "Salary": 75000 }
+/// </example>
+/// <returns>
+/// No return value (void).
+/// </returns> Updates the teacher record in the database.</returns>
 
         [HttpPut("UpdateTeacher/{TeacherId}")]
         public void UpdateTeacher(int TeacherId, [FromBody] Teacher TeacherData)
